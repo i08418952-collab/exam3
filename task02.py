@@ -50,17 +50,17 @@ class CinemaSession:
 if __name__ == "__main__":
     session = CinemaSession("Avatar 2", 5)
 
-    print(session.available_seats())  # [1, 2, 3, 4, 5]
+    print(session.available_seats())  
 
     ticket1 = session.book_seat(3, "Ali")
-    print(ticket1.owner)         # Ali
-    print(ticket1.seat.number)   # 3
-    print(ticket1.seat.is_taken) # True
+    print(ticket1.owner)         
+    print(ticket1.seat.number)   
+    print(ticket1.seat.is_taken) 
 
-    print(session.available_seats())  # [1, 2, 4, 5]
+    print(session.available_seats())  
 
     ticket2 = session.book_seat(1, "Vali")
-    print(session.available_seats())  # [2, 4, 5]
+    print(session.available_seats())  
 
     try:
         session.book_seat(3, "Sardor")
